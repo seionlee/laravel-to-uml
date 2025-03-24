@@ -1,5 +1,5 @@
 {
-    "name": "andyabih/laravel-to-uml",
+    "name": "seionlee/laravel-to-uml",
     "description": "Automagically generate UML diagrams of your Laravel code.",
     "type": "library",
     "license": "MIT",
