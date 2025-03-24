@@ -172,18 +172,18 @@ class LaravelToUML {
      */
     protected function getNamespaceRelationships($fileLines) {
         $namespaceRelationships = [];
-        foreach($fileLines as $line) {
-            if(Str::startsWith($line, 'use ')) {
-                $explodedName = explode(" ", $line);
-                $classNamespace = str_replace(";", "", end($explodedName));
+        // foreach($fileLines as $line) {
+        //     if(Str::startsWith($line, 'use ')) {
+        //         $explodedName = explode(" ", $line);
+        //         $classNamespace = str_replace(";", "", end($explodedName));
 
-                if(!in_array($classNamespace, array_keys($this->classes))) continue; // Only track relationships from other tracked classes
+        //         if(!in_array($classNamespace, array_keys($this->classes))) continue; // Only track relationships from other tracked classes
 
-                $namespaceExploded = explode("\\", $line);
-                $relatedClassName = str_replace(";", "", end($namespaceExploded));
-                $namespaceRelationships[$relatedClassName] = $relatedClassName;
-            }
-        }
+        //         $namespaceExploded = explode("\\", $line);
+        //         $relatedClassName = str_replace(";", "", end($namespaceExploded));
+        //         $namespaceRelationships[$relatedClassName] = $relatedClassName;
+        //     }
+        // }
         return $namespaceRelationships;
     }
 
